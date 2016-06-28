@@ -1,0 +1,6 @@
+platform :ios
+
+install! ‘cocoapods’, :integrate_targets => false
+target “StackBluriOS” do
+	pod 'StackBluriOS', '~> 0.0.1’
+end
