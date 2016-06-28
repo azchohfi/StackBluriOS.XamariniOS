@@ -251,4 +251,14 @@ paket-files/
 .idea/
 *.sln.iml
 
+bin/ 
+obj/ 
+Pods/ 
+.DS_Store 
+*.dll 
+*.mdb 
+*.a 
+*.userprefs 
+*.nupkg 
+
 StackBluriOS.XamariniOS/build/
