@@ -29,19 +29,19 @@ $(PODS_PROJECT):
 
 $(LIB_NAME_I386): $(PODS_PROJECT)
 	$(XBUILD) -project $(PODS_PROJECT) -target $(PODS_TARGET) -sdk iphonesimulator -configuration Release clean build
-	-mv $(PROJECT_ROOT)/build/Release-iphonesimulator/lib$(PODS_TARGET).a $@
+	-mv $(PROJECT_ROOT)/build/Release-iphonesimulator/$(PODS_TARGET)/lib$(PODS_TARGET).a $@
 
 $(LIB_NAME_ARMV7): $(PODS_PROJECT)
 	$(XBUILD) -project $(PODS_PROJECT) -target $(PODS_TARGET) -sdk iphoneos -arch armv7 -configuration Release clean build
-	-mv $(PROJECT_ROOT)/build/Release-iphoneos/lib$(PODS_TARGET).a $@
+	-mv $(PROJECT_ROOT)/build/Release-iphoneos/$(PODS_TARGET)/lib$(PODS_TARGET).a $@
 	
 $(LIB_NAME_ARMV7S): $(PODS_PROJECT)
 	$(XBUILD) -project $(PODS_PROJECT) -target $(PODS_TARGET) -sdk iphoneos -arch armv7s -configuration Release clean build
-	-mv $(PROJECT_ROOT)/build/Release-iphoneos/lib$(PODS_TARGET).a $@
+	-mv $(PROJECT_ROOT)/build/Release-iphoneos/$(PODS_TARGET)/lib$(PODS_TARGET).a $@
 
 $(LIB_NAME_ARM64): $(PODS_PROJECT)
 	$(XBUILD) -project $(PODS_PROJECT) -target $(PODS_TARGET) -sdk iphoneos -arch arm64 -configuration Release clean build
-	-mv $(PROJECT_ROOT)/build/Release-iphoneos/lib$(PODS_TARGET).a $@
+	-mv $(PROJECT_ROOT)/build/Release-iphoneos/$(PODS_TARGET)/lib$(PODS_TARGET).a $@
 
 $(LIB_NAME): $(LIB_NAME_I386) $(LIB_NAME_ARMV7) $(LIB_NAME_ARMV7S) $(LIB_NAME_ARM64)
 	lipo -create -output $@ $^
