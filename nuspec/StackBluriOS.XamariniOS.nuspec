@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
 	<id>StackBluriOS.XamariniOS</id>
-	<version>1.0.0</version>
+	<version>1.0.2</version>
 	<title>StackBluriOS bindings</title>
 	<authors>azchohfi</authors>
 	<owners>Alexandre Chohfi</owners>
